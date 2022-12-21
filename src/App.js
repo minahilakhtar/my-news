@@ -8,6 +8,7 @@ import News from './Components/News';
 
 import {
   BrowserRouter as Router,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -28,18 +29,18 @@ const App =()=> {
         color='#f11946'
         progress={progress}
       />
-        <Router>
+        <HashRouter>
         <Navbar/>
         <Routes >
         <Route exact path="/my-news" element = {<News setprogress={setprogress} apiKey={apiKey} key="general" pageSize = {pageSize} category = "general"/>}/>
-        <Route exact path="/Entertainment" element = {<News setprogress={setprogress} apiKey={apiKey} key="Entertainment" pageSize = {pageSize} category = "Entertainment"/>}/>
-        <Route exact path="/Business" element = {<News setprogress={setprogress} apiKey={apiKey} key="Business" pageSize = {pageSize} category = "Business"/>}/>
-        <Route exact path="/technology" element = {<News setprogress={setprogress} apiKey={apiKey} key="technology" pageSize = {pageSize} category = "technology"/>}/>
-        <Route exact path="/Science" element = {<News setprogress={setprogress} apiKey={apiKey} key="Science" pageSize = {pageSize} category = "Science"/>}/>
-        <Route exact path="/Sports" element = {<News setprogress={setprogress} apiKey={apiKey} key="Sports" pageSize = {pageSize} category = "Sports"/>}/>
-        <Route exact path="/Health" element = {<News setprogress={setprogress} apiKey={apiKey} key="Health" pageSize = {pageSize} category = "Health"/>}/>
+        <Route path="/Entertainment" element = {<News setprogress={setprogress} apiKey={apiKey} key="Entertainment" pageSize = {pageSize} category = "Entertainment"/>}/>
+        <Route path="/Business" element = {<News setprogress={setprogress} apiKey={apiKey} key="Business" pageSize = {pageSize} category = "Business"/>}/>
+        <Route path="/technology" element = {<News setprogress={setprogress} apiKey={apiKey} key="technology" pageSize = {pageSize} category = "technology"/>}/>
+        <Route path="/Science" element = {<News setprogress={setprogress} apiKey={apiKey} key="Science" pageSize = {pageSize} category = "Science"/>}/>
+        <Route path="/Sports" element = {<News setprogress={setprogress} apiKey={apiKey} key="Sports" pageSize = {pageSize} category = "Sports"/>}/>
+        <Route path="/Health" element = {<News setprogress={setprogress} apiKey={apiKey} key="Health" pageSize = {pageSize} category = "Health"/>}/>
         </Routes>
-        </Router>
+        </HashRouter>
       </div>
       
     )
