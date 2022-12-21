@@ -31,7 +31,7 @@ const App =()=> {
         <Router>
         <Navbar/>
         <Routes >
-        <Route exact path="/" element = {<News setprogress={setprogress} apiKey={apiKey} key="general" pageSize = {pageSize} category = "general"/>}/>
+        <Route exact path="" element = {<News setprogress={setprogress} apiKey={apiKey} key="general" pageSize = {pageSize} category = "general"/>}/>
         <Route exact path="/Entertainment" element = {<News setprogress={setprogress} apiKey={apiKey} key="Entertainment" pageSize = {pageSize} category = "Entertainment"/>}/>
         <Route exact path="/Business" element = {<News setprogress={setprogress} apiKey={apiKey} key="Business" pageSize = {pageSize} category = "Business"/>}/>
         <Route exact path="/technology" element = {<News setprogress={setprogress} apiKey={apiKey} key="technology" pageSize = {pageSize} category = "technology"/>}/>
